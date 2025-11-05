@@ -56,7 +56,7 @@ class SecondaryPage extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: height * 0.007),
+            SizedBox(height: height * 0.001),
             Padding(
               padding: EdgeInsets.only(left: width * 0.1),
               child: const Text(
@@ -73,7 +73,7 @@ class SecondaryPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(left: width * 0.1),
+              padding: EdgeInsets.only(left: width * 0.1, right: width * 0.1),
               child: const Text(
                 """
               Time management is a fundamental skill that enables individuals to use their time effectively and productively, leading to greater success in both personal and professional life.
