@@ -1,14 +1,22 @@
 import 'package:blog_app_flutter/widgets/body_sizedbox.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class SecondaryPage extends StatelessWidget {
+class SecondaryPage extends StatefulWidget {
   const SecondaryPage({super.key});
 
+  @override
+  State<SecondaryPage> createState() => _SecondaryPageState();
+}
+
+class _SecondaryPageState extends State<SecondaryPage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     var width = size.width;
     var height = size.height;
+    double _rating = 3.5;
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 151, 202, 219),
       appBar: AppBar(
@@ -63,6 +71,27 @@ class SecondaryPage extends StatelessWidget {
                 "The secret to time management is simple: Jedi time tricks.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
               ),
+            ),
+            SizedBox(height: height * 0.02),
+            Row(
+              children: [
+                SizedBox(width: width * 0.1),
+                RatingBar.builder(
+                  initialRating: _rating,
+                  minRating: 1,
+                  direction: Axis.horizontal,
+                  allowHalfRating: true,
+                  itemCount: 5,
+                  itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                  itemBuilder: (context, _) =>
+                      Icon(Icons.star, color: Colors.amber),
+                  onRatingUpdate: (rating) {
+                    setState(() {
+                      _rating = rating;
+                    });
+                  },
+                ),
+              ],
             ),
             SizedBox(height: height * 0.02),
             Padding(
