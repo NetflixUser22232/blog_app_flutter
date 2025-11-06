@@ -37,7 +37,10 @@ class MainPage extends StatelessWidget {
               //   context,
               // ).showSnackBar(SnackBar(content: const Text("Are you sure?")));
             },
-            child: Icon(Icons.menu, color: Color(0xFFfefae0)),
+            child: Padding(
+              padding: EdgeInsets.only(right: width * 0.025),
+              child: Icon(Icons.menu, color: Color(0xFFfefae0)),
+            ),
           ),
         ],
         backgroundColor: Color(0xFF283618),
