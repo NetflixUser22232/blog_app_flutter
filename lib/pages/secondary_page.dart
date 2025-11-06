@@ -18,7 +18,8 @@ class _SecondaryPageState extends State<SecondaryPage> {
     var height = size.height;
     double _rating = 3.5;
     return Scaffold(
-      backgroundColor: Color(0xFFdda15e),
+      backgroundColor: Color(0xFF90a955),
+      //  Color(0xFFdda15e),
       // Color.fromARGB(255, 151, 202, 219),
       appBar: AppBar(
         leading: GestureDetector(
@@ -27,14 +28,19 @@ class _SecondaryPageState extends State<SecondaryPage> {
               context,
             ).push(MaterialPageRoute(builder: (context) => MainPage()));
           },
-          child: Icon(Icons.arrow_back, color: Color(0xFFfefae0)),
+          child: Icon(
+            Icons.arrow_back,
+            color: Color(0xFFecf39e),
+            //  Color(0xFFfefae0),
+          ),
         ),
         title: const Text(
           "𝓡𝓮𝓪𝓭𝓲𝓷𝓰 𝓪𝓻𝓮𝓪",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: Color(0xFFfefae0),
+            color: Color(0xFFecf39e),
+            //  Color(0xFFfefae0),
           ),
         ),
         backgroundColor: Color(0xFF283618),

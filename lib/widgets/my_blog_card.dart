@@ -20,22 +20,38 @@ class MyBlogCard extends StatelessWidget {
     var height = size.height;
     return Card(
       elevation: 7,
-      color: Color(0xFFfefae0),
+      color: Color(0xFFecf39e),
+      //  Color(0xFFfefae0),
       //  Colors.white,
       margin: EdgeInsets.only(top: 30),
       child: Container(
         margin: EdgeInsets.only(left: 10, top: 15),
         width: width * 0.9,
-        height: height * 0.22,
+        height: height * 0.25,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title),
-            SizedBox(height: height * 0.025),
-            Text(subtitle),
-            SizedBox(height: height * 0.025),
-            Text(authorName),
-            SizedBox(height: height * 0.053),
+            Text(
+              title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(),
+            ),
+            SizedBox(height: height * 0.022),
+            Text(
+              subtitle,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(),
+            ),
+            SizedBox(height: height * 0.022),
+            Text(
+              authorName,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(),
+            ),
+            SizedBox(height: height * 0.038),
             InkWell(
               onTap: () {
                 Navigator.of(context).push(
@@ -43,7 +59,7 @@ class MyBlogCard extends StatelessWidget {
                 );
               },
               child: Container(
-                width: width * 0.14,
+                width: width * 0.22,
                 height: height * 0.04,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -59,7 +75,8 @@ class MyBlogCard extends StatelessWidget {
                   child: const Text(
                     "Read more",
                     style: TextStyle(
-                      color: Color(0xFFfefae0),
+                      color: Color(0xFFecf39e),
+                      //  Color(0xFFfefae0),
                       // Colors.white
                     ),
                   ),
