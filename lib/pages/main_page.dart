@@ -11,14 +11,16 @@ class MainPage extends StatelessWidget {
     var width = size.width;
     var height = size.height;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 151, 202, 219),
+      backgroundColor: Color(0xFFdda15e),
+      //  Color(0xFF98c1d9),
       appBar: AppBar(
         title: const Text(
           "𝔅𝔩𝔬𝔤𝔰 𝔄𝔭𝔭",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Color(0xFFfefae0),
+            //  const Color.fromARGB(195, 255, 255, 255),
           ),
         ),
         centerTitle: true,
@@ -35,19 +37,23 @@ class MainPage extends StatelessWidget {
               //   context,
               // ).showSnackBar(SnackBar(content: const Text("Are you sure?")));
             },
-            child: Icon(Icons.menu, color: Colors.black),
+            child: Icon(Icons.menu, color: Color(0xFFfefae0)),
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 1, 138, 190),
+        backgroundColor: Color(0xFF283618),
+        // Color(0xFF15616d),
+        // Color(0xFF3d5a80),
+        // Color.fromARGB(255, 1, 138, 190),
       ),
       body: Column(
         children: [
           // SizedBox(height: height * 0.03),
           Container(
             width: width,
-            height: height * 0.25,
+            height: height * 0.1,
             decoration: BoxDecoration(
-              color: Color.fromARGB(228, 75, 134, 143),
+              color: Color(0xFF606c38),
+              // Color.fromARGB(228, 75, 134, 143),
               // const Color.fromARGB(255, 5, 46, 80),
             ),
             child: Row(
@@ -60,7 +66,8 @@ class MainPage extends StatelessWidget {
                   height: height * 0.05,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
+                    color: Color(0xFFfefae0),
+                    // Colors.white,
                   ),
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -77,7 +84,9 @@ class MainPage extends StatelessWidget {
                       SnackBar(
                         content: const Text(
                           "You have successfully added a blog!",
+                          style: TextStyle(color: Color(0xFFfefae0)),
                         ),
+                        backgroundColor: Color(0xFF606c38),
                       ),
                     );
                   },
@@ -87,9 +96,17 @@ class MainPage extends StatelessWidget {
                     height: height * 0.04,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(71, 255, 255, 255),
+                      color: Color(0xFF283618),
+                      //  Color(0xFF014f86),
+                      //  const Color.fromARGB(71, 255, 255, 255),
                     ),
-                    child: Center(child: Icon(Icons.send)),
+                    child: Center(
+                      child: Icon(
+                        Icons.send,
+                        color: Color(0xFFfefae0),
+                        //  const Color.fromARGB(195, 255, 255, 255),
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -97,7 +114,7 @@ class MainPage extends StatelessWidget {
           ),
           SizedBox(
             width: width,
-            height: height * 0.6,
+            height: height * 0.75,
             child: SingleChildScrollView(
               // scrollDirection: Axis.vertical,
               child: Column(
@@ -207,24 +224,29 @@ class MainPage extends StatelessWidget {
       bottomNavigationBar: NavigationBar(
         destinations: [
           NavigationDestination(
-            icon: Icon(Icons.home, color: Colors.black, size: 30),
+            icon: Icon(Icons.home, color: Color(0xFFfefae0), size: 30),
             label: "Home",
           ),
           NavigationDestination(
-            icon: Icon(Icons.search, color: Colors.black, size: 30),
+            icon: Icon(Icons.search, color: Color(0xFFfefae0), size: 30),
             label: "Search",
           ),
           NavigationDestination(
-            icon: Icon(Icons.book, color: Colors.black, size: 30),
+            icon: Icon(Icons.book, color: Color(0xFFfefae0), size: 30),
             label: "Favourite",
           ),
           NavigationDestination(
-            icon: Icon(Icons.person, color: Colors.black, size: 30),
+            icon: Icon(Icons.person, color: Color(0xFFfefae0), size: 30),
             label: "Profile",
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 1, 138, 190),
+        backgroundColor: Color(0xFF283618),
+
+        // Color(0xFF15616d),
+        //  Color(0xFF468faf),
+        //  Color.fromARGB(255, 1, 138, 190),
         elevation: 3,
+        // labelTextStyle: TextStyle(color: Colors.black),
       ),
     );
   }

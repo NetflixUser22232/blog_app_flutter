@@ -1,3 +1,4 @@
+import 'package:blog_app_flutter/pages/main_page.dart';
 import 'package:blog_app_flutter/widgets/body_sizedbox.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,17 +19,27 @@ class _SecondaryPageState extends State<SecondaryPage> {
     var height = size.height;
     double _rating = 3.5;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 151, 202, 219),
+      backgroundColor: Color(0xFFdda15e),
+      // Color.fromARGB(255, 151, 202, 219),
       appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => MainPage()));
+          },
+          child: Icon(Icons.arrow_back, color: Color(0xFFfefae0)),
+        ),
         title: const Text(
           "𝓡𝓮𝓪𝓭𝓲𝓷𝓰 𝓪𝓻𝓮𝓪",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: Colors.black,
+            color: Color(0xFFfefae0),
           ),
         ),
-        backgroundColor: Color.fromARGB(255, 1, 138, 190),
+        backgroundColor: Color(0xFF283618),
+        // Color.fromARGB(255, 1, 138, 190),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

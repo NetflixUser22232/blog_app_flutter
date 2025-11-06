@@ -19,6 +19,9 @@ class MyBlogCard extends StatelessWidget {
     var width = size.width;
     var height = size.height;
     return Card(
+      elevation: 7,
+      color: Color(0xFFfefae0),
+      //  Colors.white,
       margin: EdgeInsets.only(top: 30),
       child: Container(
         margin: EdgeInsets.only(left: 10, top: 15),
@@ -44,10 +47,23 @@ class MyBlogCard extends StatelessWidget {
                 height: height * 0.04,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 1, 138, 190),
+                  color: Color(0xFF283618),
+                  // boxShadow: [BoxShadow(blurRadius: 1)],
+                  // Color(0xFF468faf),
+                  // Color(0xFF014f86),
+                  // Color(0xFF3d5a80),
+                  // Color.fromARGB(255, 1, 138, 190),
                   // const Color.fromARGB(179, 72, 134, 185),
                 ),
-                child: Center(child: const Text("Read more")),
+                child: Center(
+                  child: const Text(
+                    "Read more",
+                    style: TextStyle(
+                      color: Color(0xFFfefae0),
+                      // Colors.white
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
