@@ -40,12 +40,24 @@ class _MainPageState extends State<MainPage> {
               await showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text('Information'),
-                  content: Text('This is an important information dialog.'),
+                  title: Text(
+                    'Information',
+                    style: TextStyle(color: Color(0xFF606c38)),
+                  ),
+                  content: Text(
+                    'This is an important information dialog.',
+                    style: TextStyle(color: Color(0xFF606c38)),
+                  ),
+                  backgroundColor: Color(0xFFecf39e),
+                  //  Color(0xFF283618),
+                  // Color(0xFF606c38),
                   actions: [
                     TextButton(
                       onPressed: () => Navigator.of(context).pop(),
-                      child: Text('OK'),
+                      child: Text(
+                        'OK',
+                        style: TextStyle(color: Color.fromARGB(255, 27, 45, 7)),
+                      ),
                     ),
                   ],
                 ),
@@ -54,8 +66,12 @@ class _MainPageState extends State<MainPage> {
               // Then show snackbar after dialog is closed
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('Dialog closed'),
+                  content: Text(
+                    'Dialog closed',
+                    style: TextStyle(color: Color(0xFFecf39e)),
+                  ),
                   duration: Duration(seconds: 2),
+                  backgroundColor: Color(0xFF606c38),
                 ),
               );
             },
@@ -91,7 +107,8 @@ class _MainPageState extends State<MainPage> {
                   height: height * 0.05,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Color.fromARGB(255, 233, 237, 183),
+                    color: Color(0xFFecf39e),
+                    // Color.fromARGB(255, 233, 237, 183),
                     //  Color(0xFFfefae0),
                     // Colors.white,
                   ),
@@ -110,7 +127,7 @@ class _MainPageState extends State<MainPage> {
                       SnackBar(
                         content: const Text(
                           "You have successfully added a blog!",
-                          style: TextStyle(color: Color(0xFFfefae0)),
+                          style: TextStyle(color: Color(0xFFecf39e)),
                         ),
                         backgroundColor: Color(0xFF606c38),
                       ),
