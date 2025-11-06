@@ -1,6 +1,4 @@
-import 'package:blog_app_flutter/pages/secondary_page.dart';
 import 'package:blog_app_flutter/widgets/my_blog_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {

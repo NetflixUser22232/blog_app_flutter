@@ -16,7 +16,7 @@ class _SecondaryPageState extends State<SecondaryPage> {
     var size = MediaQuery.of(context).size;
     var width = size.width;
     var height = size.height;
-    double _rating = 3.5;
+    double rating = 3.5;
     return Scaffold(
       backgroundColor: Color(0xFF90a955),
       //  Color(0xFFdda15e),
@@ -93,7 +93,7 @@ class _SecondaryPageState extends State<SecondaryPage> {
               children: [
                 SizedBox(width: width * 0.1),
                 RatingBar.builder(
-                  initialRating: _rating,
+                  initialRating: rating,
                   minRating: 1,
                   direction: Axis.horizontal,
                   allowHalfRating: true,
@@ -103,7 +103,7 @@ class _SecondaryPageState extends State<SecondaryPage> {
                       Icon(Icons.star, color: Colors.amber),
                   onRatingUpdate: (rating) {
                     setState(() {
-                      _rating = rating;
+                      rating = rating;
                     });
                   },
                 ),
