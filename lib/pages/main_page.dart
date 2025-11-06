@@ -86,184 +86,175 @@ class _MainPageState extends State<MainPage> {
         // Color(0xFF3d5a80),
         // Color.fromARGB(255, 1, 138, 190),
       ),
-      body: Column(
-        children: [
-          // SizedBox(height: height * 0.03),
-          Container(
-            width: width,
-            height: height * 0.1,
-            decoration: BoxDecoration(
-              color: Color(0xFF606c38),
-              // Color.fromARGB(228, 75, 134, 143),
-              // const Color.fromARGB(255, 5, 46, 80),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SizedBox(width: width * 0.035),
-                Container(
-                  padding: EdgeInsets.only(left: 20),
-                  width: width * 0.77,
-                  height: height * 0.05,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Color(0xFFecf39e),
-                    // Color.fromARGB(255, 233, 237, 183),
-                    //  Color(0xFFfefae0),
-                    // Colors.white,
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Write your blog here...",
-                    ),
-                  ),
-                ),
-                SizedBox(width: width * 0.03),
-                // Button to send a blog you entered
-                GestureDetector(
-                  onTap: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: const Text(
-                          "You have successfully added a blog!",
-                          style: TextStyle(color: Color(0xFFecf39e)),
-                        ),
-                        backgroundColor: Color(0xFF606c38),
-                      ),
-                    );
-                  },
-
-                  child: Container(
-                    width: width * 0.12,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // SizedBox(height: height * 0.03),
+            Container(
+              width: width,
+              height: height * 0.1,
+              decoration: BoxDecoration(
+                color: Color(0xFF606c38),
+                // Color.fromARGB(228, 75, 134, 143),
+                // const Color.fromARGB(255, 5, 46, 80),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(width: width * 0.035),
+                  Container(
+                    padding: EdgeInsets.only(left: 20),
+                    width: width * 0.77,
                     height: height * 0.05,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Color(0xFF283618),
-                      //  Color(0xFF014f86),
-                      //  const Color.fromARGB(71, 255, 255, 255),
+                      color: Color(0xFFecf39e),
+                      // Color.fromARGB(255, 233, 237, 183),
+                      //  Color(0xFFfefae0),
+                      // Colors.white,
                     ),
-                    child: Center(
-                      child: Icon(
-                        Icons.send,
-                        size: 30,
-                        color: Color(0xFFecf39e),
-                        //  Color(0xFFfefae0),
-                        //  const Color.fromARGB(195, 255, 255, 255),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Write your blog here...",
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            width: width,
-            height: height * 0.67,
-            child: SingleChildScrollView(
-              // scrollDirection: Axis.vertical,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  // Blog Card
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
+                  SizedBox(width: width * 0.03),
+                  // Button to send a blog you entered
+                  GestureDetector(
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: const Text(
+                            "You have successfully added a blog!",
+                            style: TextStyle(color: Color(0xFFecf39e)),
+                          ),
+                          backgroundColor: Color(0xFF606c38),
+                        ),
+                      );
+                    },
 
-                  // Testing data
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title: "How to master your time",
-                    subtitle:
-                        "The secret to time management is simple: Jedi time tricks.",
-                    authorName: "Oliver Emberton",
-                  ),
-                  MyBlogCard(
-                    title:
-                        "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-                    subtitle:
-                        "Unless you’re winning, most of life will seem hideously unfair to you.",
-                    authorName: "Oliver Emberton",
+                    child: Container(
+                      width: width * 0.12,
+                      height: height * 0.05,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color(0xFF283618),
+                        //  Color(0xFF014f86),
+                        //  const Color.fromARGB(71, 255, 255, 255),
+                      ),
+                      child: Center(
+                        child: Icon(
+                          Icons.send,
+                          size: 30,
+                          color: Color(0xFFecf39e),
+                          //  Color(0xFFfefae0),
+                          //  const Color.fromARGB(195, 255, 255, 255),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+            // width: width,
+            //   height: height * 0.67,
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+
+            // Testing data
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title: "How to master your time",
+              subtitle:
+                  "The secret to time management is simple: Jedi time tricks.",
+              authorName: "Oliver Emberton",
+            ),
+            MyBlogCard(
+              title:
+                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+              subtitle:
+                  "Unless you’re winning, most of life will seem hideously unfair to you.",
+              authorName: "Oliver Emberton",
+            ),
+          ],
+        ),
       ),
 
       // Bottom navigation bar

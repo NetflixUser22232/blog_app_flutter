@@ -51,7 +51,7 @@ class MyBlogCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(),
             ),
-            SizedBox(height: height * 0.03),
+            SizedBox(height: height * 0.025),
             InkWell(
               onTap: () {
                 Navigator.of(context).push(
