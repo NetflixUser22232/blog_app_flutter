@@ -43,7 +43,7 @@ class MyBlogCard extends StatelessWidget {
                 );
               },
               child: Container(
-                width: width * 0.12,
+                width: width * 0.14,
                 height: height * 0.04,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
