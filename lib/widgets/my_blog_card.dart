@@ -23,10 +23,10 @@ class MyBlogCard extends StatelessWidget {
       color: Color(0xFFecf39e),
       //  Color(0xFFfefae0),
       //  Colors.white,
-      margin: EdgeInsets.only(top: 30),
+      margin: EdgeInsets.only(top: 25),
       child: Container(
         margin: EdgeInsets.only(left: 15, top: 10),
-        width: width * 0.24,
+        width: width * 0.4,
         height: height * 0.25,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
