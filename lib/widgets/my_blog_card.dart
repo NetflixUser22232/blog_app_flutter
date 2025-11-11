@@ -27,7 +27,7 @@ class MyBlogCard extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(left: 10, top: 15),
         width: width * 0.4,
-        height: height * 0.27,
+        height: height * 0.25,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
