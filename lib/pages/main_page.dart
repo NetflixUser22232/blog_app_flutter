@@ -1,3 +1,4 @@
+import 'package:blog_app_flutter/model/blog_model.dart';
 import 'package:blog_app_flutter/widgets/my_blog_card.dart';
 import 'package:flutter/material.dart';
 
@@ -160,98 +161,60 @@ class _MainPageState extends State<MainPage> {
             ),
             // width: width,
             //   height: height * 0.67,
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: blog.length,
+              itemBuilder: (context, index) {
+                return MyBlogCard(
+                  title: blog[index].title,
+                  subtitle: blog[index].subtitle,
+                  authorName: blog[index].authorName,
+                );
+                // ListView(
+                //   children: [
+                //     MyBlogCard(
+                //       title: blog[index].title,
+                //       subtitle: blog[index].subtitle,
+                //       authorName: blog[index].authorName,
+                //     ),
+                //     // MyBlogCard(
+                //     //   title: blog[index].title,
+                //     //   subtitle: blog[index].subtitle,
+                //     //   authorName: blog[index].authorName,
+                //     // ),
+                //     // MyBlogCard(
+                //     //   title: blog[index].title,
+                //     //   subtitle: blog[index].subtitle,
+                //     //   authorName: blog[index].authorName,
+                //     // ),
+                //     // MyBlogCard(
+                //     //   title: blog[index].title,
+                //     //   subtitle: blog[index].subtitle,
+                //     //   authorName: blog[index].authorName,
+                //     // ),
+                //     // MyBlogCard(
+                //     //   title: blog[index].title,
+                //     //   subtitle: blog[index].subtitle,
+                //     //   authorName: blog[index].authorName,
+                //     // ),
+                //   ],
+                // );
 
-            // Testing data
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title: "How to master your time",
-              subtitle:
-                  "The secret to time management is simple: Jedi time tricks.",
-              authorName: "Oliver Emberton",
-            ),
-            MyBlogCard(
-              title:
-                  "The problem isn’t that life is unfair – it’s your broken idea of fairness",
-              subtitle:
-                  "Unless you’re winning, most of life will seem hideously unfair to you.",
-              authorName: "Oliver Emberton",
+                // MyBlogCard(
+                //   title: "How to master your time",
+                //   subtitle:
+                //       "The secret to time management is simple: Jedi time tricks.",
+                //   authorName: "Oliver Emberton",
+                // ),
+                // MyBlogCard(
+                //   title:
+                //       "The problem isn’t that life is unfair – it’s your broken idea of fairness",
+                //   subtitle:
+                //       "Unless you’re winning, most of life will seem hideously unfair to you.",
+                //   authorName: "Oliver Emberton",
+                // ),
+              },
             ),
           ],
         ),

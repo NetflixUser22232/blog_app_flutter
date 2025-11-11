@@ -26,7 +26,7 @@ class MyBlogCard extends StatelessWidget {
       margin: EdgeInsets.only(top: 30),
       child: Container(
         margin: EdgeInsets.only(left: 10, top: 15),
-        width: width * 0.9,
+        width: width * 0.8,
         height: height * 0.25,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +51,7 @@ class MyBlogCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(),
             ),
-            SizedBox(height: height * 0.025),
+            SizedBox(height: height * 0.085),
             InkWell(
               onTap: () {
                 Navigator.of(context).push(
