@@ -1,8 +1,14 @@
+import 'package:blog_app_flutter/widgets/add_blog_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
-class AddBlogContainer extends StatelessWidget {
+class AddBlogContainer extends StatefulWidget {
   const AddBlogContainer({super.key});
 
+  @override
+  State<AddBlogContainer> createState() => _AddBlogContainerState();
+}
+
+class _AddBlogContainerState extends State<AddBlogContainer> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -11,7 +17,9 @@ class AddBlogContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          AddBlogBottomSheet.show(context);
+        },
         child: Card(
           elevation: 5,
           color: Color.fromARGB(255, 69, 93, 42),
