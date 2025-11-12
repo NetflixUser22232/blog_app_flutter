@@ -30,22 +30,39 @@ class AddBlogBottomSheet extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
+                    cursorColor: Color(0xFF90a955),
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Title",
-                      hintStyle: TextStyle(color: Colors.red, fontSize: 16),
+                      hintStyle: TextStyle(
+                        color: Color(0xFF283618),
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   TextFormField(
+                    cursorColor: Color(0xFF90a955),
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Subtitle",
+                      hintStyle: TextStyle(
+                        color: Color(0xFF283618),
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
                   TextFormField(
+                    cursorColor: Color(0xFF90a955),
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Author name",
+                      hintStyle: TextStyle(
+                        color: Color(0xFF283618),
+                        fontSize: 22,
+                        fontWeight: FontWeight.w800,
+                      ),
                     ),
                   ),
                 ],
