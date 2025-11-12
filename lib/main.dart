@@ -1,5 +1,5 @@
 import 'package:blog_app_flutter/pages/home_page.dart';
-import 'package:blog_app_flutter/widgets/dotted_line_container.dart';
+import 'package:blog_app_flutter/widgets/dashed_border_container.dart';
 import 'package:flutter/material.dart';
 
 void main() {
