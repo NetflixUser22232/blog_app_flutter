@@ -1,5 +1,5 @@
 import 'package:blog_app_flutter/pages/home_page.dart';
-import 'package:blog_app_flutter/widgets/dashed_border_container.dart';
+import 'package:blog_app_flutter/widgets/add_blog_container.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: const DottedLineContainer(),
-      // const HomePage(),
+      home:
+          // const AddBlogContainer(),
+          const HomePage(),
     );
   }
 }

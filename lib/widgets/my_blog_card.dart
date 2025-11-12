@@ -25,7 +25,7 @@ class MyBlogCard extends StatelessWidget {
         color: Color(0xFFecf39e),
         //  Color(0xFFfefae0),
         //  Colors.white,
-        margin: EdgeInsets.only(top: 25),
+        margin: EdgeInsets.only(top: 15),
         child: Container(
           margin: EdgeInsets.only(left: 15, top: 10),
           width: double.infinity,
