@@ -1,3 +1,4 @@
+import 'package:blog_app_flutter/widgets/form_field_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class AddBlogBottomSheet extends StatelessWidget {
@@ -22,50 +23,44 @@ class AddBlogBottomSheet extends StatelessWidget {
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
-              color: Color(0xFFecf39e),
-              //  Color(0xFF90a955),
+              color:
+                  //  Color(0xFFecf39e),
+                  Color(0xFF90a955),
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20),
-              child: Column(
-                children: [
-                  TextFormField(
-                    cursorColor: Color(0xFF90a955),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
+            child: Container(
+              margin: EdgeInsets.all(7),
+              width: width * 0.7,
+              height: height,
+              decoration: BoxDecoration(
+                color: Color(0xFFecf39e),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10, top: 20),
+                child: Column(
+                  children: [
+                    FormFieldBottomSheet(
                       hintText: "Title",
-                      hintStyle: TextStyle(
-                        color: Color(0xFF283618),
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ),
-                  TextFormField(
-                    cursorColor: Color(0xFF90a955),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
+                    SizedBox(height: height * 0.01),
+                    FormFieldBottomSheet(
                       hintText: "Subtitle",
-                      hintStyle: TextStyle(
-                        color: Color(0xFF283618),
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
                     ),
-                  ),
-                  TextFormField(
-                    cursorColor: Color(0xFF90a955),
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
+                    SizedBox(height: height * 0.01),
+                    FormFieldBottomSheet(
                       hintText: "Author name",
-                      hintStyle: TextStyle(
-                        color: Color(0xFF283618),
-                        fontSize: 22,
-                        fontWeight: FontWeight.w800,
-                      ),
+                      fontSize: 22,
+                      fontWeight: FontWeight.w800,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           );
