@@ -11,6 +11,7 @@ class AddBlogBottomSheet extends StatelessWidget {
     var height = size.height;
     return Scaffold(
       body: await showModalBottomSheet(
+        enableDrag: true,
         context: context,
         isScrollControlled: true,
         backgroundColor: Colors.transparent,
@@ -58,6 +59,39 @@ class AddBlogBottomSheet extends StatelessWidget {
                       hintText: "Author name",
                       fontSize: 22,
                       fontWeight: FontWeight.w800,
+                    ),
+                    SizedBox(height: height * 0.185),
+                    GestureDetector(
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            backgroundColor: Color(0xFF606c38),
+                            content: const Center(
+                              child: Text(
+                                "You have successfully added a blog!",
+                                style: TextStyle(color: Color(0xFFecf39e)),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: width * 0.4,
+                        height: height * 0.06,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xFF606c38),
+                        ),
+                        child: Center(
+                          child: const Text(
+                            "Done",
+                            style: TextStyle(
+                              color: Color(0xFFecf39e),
+                              fontSize: 22,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
