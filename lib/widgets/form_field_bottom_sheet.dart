@@ -6,6 +6,8 @@ class FormFieldBottomSheet extends StatelessWidget {
   Color hintStyleColor;
   final double fontSize;
   final FontWeight fontWeight;
+  final TextEditingController controller;
+  final String? Function(String?)? validator;
 
   FormFieldBottomSheet({
     super.key,
@@ -14,6 +16,8 @@ class FormFieldBottomSheet extends StatelessWidget {
     this.hintStyleColor = const Color(0xFF283618),
     required this.fontSize,
     required this.fontWeight,
+    required this.controller,
+    required this.validator,
   });
 
   @override
@@ -31,6 +35,8 @@ class FormFieldBottomSheet extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: TextFormField(
+        validator: validator,
+        controller: controller,
         cursorColor: cursorColor,
         decoration: InputDecoration(
           border: InputBorder.none,

@@ -14,11 +14,18 @@ class _AddBlogContainerState extends State<AddBlogContainer> {
     var size = MediaQuery.of(context).size;
     var width = size.width;
     var height = size.height;
+
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: GestureDetector(
         onTap: () {
-          AddBlogBottomSheet.show(context);
+          // ✅ FIXED: Use showModalBottomSheet directly
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            backgroundColor: Colors.transparent,
+            builder: (context) => AddBlogBottomSheet(),
+          );
         },
         child: Card(
           elevation: 5,
@@ -44,7 +51,16 @@ class _AddBlogContainerState extends State<AddBlogContainer> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              // GestureDetector(
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+// GestureDetector(
               //   child: Container(
               //     // margin: EdgeInsets.only(top: 5, bottom: 5, left: 40, right: 50),
               //     width: width * 0.4,
@@ -62,16 +78,3 @@ class _AddBlogContainerState extends State<AddBlogContainer> {
               //     ),
               //   ),
               // ),
-            ),
-          ),
-        ),
-      ),
-    );
-
-    // Scaffold(
-    //   backgroundColor: Colors.grey,
-    //   body:
-
-    // );
-  }
-}
