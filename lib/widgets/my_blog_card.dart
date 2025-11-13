@@ -19,7 +19,7 @@ class MyBlogCard extends StatelessWidget {
     var width = size.width;
     var height = size.height;
     return Padding(
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(10),
       child: Card(
         elevation: 7,
         color: Color(0xFFecf39e),

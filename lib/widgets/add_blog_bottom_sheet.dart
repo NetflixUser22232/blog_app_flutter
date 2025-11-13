@@ -63,6 +63,7 @@ class AddBlogBottomSheet extends StatelessWidget {
                     SizedBox(height: height * 0.185),
                     GestureDetector(
                       onTap: () {
+                        Navigator.of(context).pop();
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: Color(0xFF606c38),
